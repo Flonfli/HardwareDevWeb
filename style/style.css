@@ -1,0 +1,401 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(21, 17, 28);
+    font-family: Arial, sans-serif;
+}
+
+/*==================== MENÚ ====================*/
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/marco.png);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-size: 100% 100%; /* Estira la imagen al 100% de ancho y altura */
+    image-rendering: pixelated; /* Mantiene los bordes nítidos */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 800px) {
+    #menu {
+        height: 50px; /* Ajusta la altura del menú en pantallas más pequeñas */
+        padding: 0 10px;
+    }
+
+    /* Podrías esconder o redimensionar tu logo si es muy grande */
+    #menu img {
+        width: 30px;
+        height: auto;
+        margin-left: 0;
+    }
+
+    /* Opcional: Si quieres que el menú se apile, puedes usar flex-direction: column; */
+    /* #menu {
+        flex-direction: column;
+        height: auto;
+    } */
+}
+
+#menu img {
+    margin-left: 30%;
+}
+
+#menu ul {
+    margin: 0 20px;
+    list-style: none;
+    display: flex;
+}
+
+#menu li:hover {
+    color: blue;
+}
+
+#menu button {
+    color: rgb(0, 0, 0);
+    background-image: url(../img/button.png);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-size: 100% 100%; /* Estira la imagen al 100% de ancho y altura */
+    image-rendering: pixelated; /* Mantiene los bordes nítidos */
+    margin: 0 20px; /* Espacio entre botones */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px 20px; /* Aumenta el espacio interno del botón */
+    width: auto; /* Permite que el ancho crezca según el contenido */
+    height: 40px; /* Ajusta la altura del botón */
+    text-align: center; /* Centra el texto */
+    display: inline-flex; /* Permite ajuste flexible */
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente el texto */
+}
+
+/*==================== SECCIÓN .TextoBit ====================*/
+.TextoBit {
+    padding-top: 100px; /* Espacio para evitar solapamiento con el menú fixed */
+    display: flex; /* Contenedor flexible */
+    justify-content: space-between; /* Imagen a la derecha */
+    align-items: flex-start; /* Elementos alineados al inicio */
+    margin: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Ajuste para tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .TextoBit {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* Ajuste para móviles o pantallas aún más pequeñas */
+@media (max-width: 768px) {
+    .TextoBit {
+        flex-direction: column; /* Apila la imagen debajo del texto */
+        align-items: center;    /* Centra todo */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.TextoBit .izquierda {
+    display: flex;
+    flex-direction: column; /* Organiza el logo, texto y botón en columna */
+    align-items: flex-start; /* Alineación a la izquierda */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.TextoBit p {
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 5px 5px 6px rgb(0, 0, 0);
+    margin: 0; /* Elimina margen extra */
+    color: rgb(255, 255, 255);
+}
+
+/* Ajuste de font-size en pantallas pequeñas */
+@media (max-width: 768px) {
+    .TextoBit p {
+        font-size: 24px; /* Reduce el tamaño de la tipografía en pantallas pequeñas */
+        text-align: center;
+    }
+}
+
+.TextoBit img {
+    width: 30%; /* Mantiene el tamaño relativo */
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-15px); /* Sube ligeramente */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición inicial */
+    }
+}
+
+.TextoBit .derecha img {
+    animation: float 2s ease-in-out infinite;
+    width: auto; /* Ajusta el tamaño según la imagen */
+    max-width: 100%; /* Evita que sea demasiado grande */
+    min-width: 250px;
+
+@media (max-width: 768px){ 
+    display: none;
+}
+}
+
+/* Botón grande */
+.TextoBit button {
+    font-size: 40px;
+    font-weight: bold;
+    width: 400px;       /* Ancho del botón */
+    height: 100px;      /* Alto del botón */
+    background-image: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ajusta la imagen sin deformarla */
+    image-rendering: pixelated; /* Mantiene los bordes nítidos al escalar */
+    color: black;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none; /* Si deseas quitar el borde por defecto */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .TextoBit button {
+        width: 100%;    /* Se hace del 100% del contenedor */
+        height: auto;   /* Ajusta la altura */
+        font-size: 24px;  
+        padding: 10px;
+    }
+}
+
+
+/*==================== SECCIÓN .Juegos ====================*/
+
+section{
+    background-color: rgb(34, 28, 44);
+}
+.Juegos {
+    padding-top: 100px; /* Espacio para evitar solapamiento con el menú fixed */
+    display: flex; /* Contenedor flexible */
+    justify-content: space-between; /* Imagen a la derecha */
+    align-items: flex-start; /* Elementos alineados al inicio */
+    margin: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Ajuste para tablets y pantallas medianas */
+@media (max-width: 992px) {
+    .Juegos {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* Ajuste para móviles o pantallas aún más pequeñas */
+@media (max-width: 768px) {
+    .Juegos {
+        flex-direction: column; /* Apila la imagen debajo del texto */
+        align-items: center;    /* Centra todo */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+
+.Juegos p {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 5px 5px 6px rgb(0, 0, 0);
+    margin: 0; /* Elimina margen extra */
+    color: rgb(255, 255, 255);
+}
+
+/* Ajuste de font-size en pantallas pequeñas */
+@media (max-width: 768px) {
+    .TextoBit p {
+        font-size: 24px; /* Reduce el tamaño de la tipografía en pantallas pequeñas */
+        text-align: center;
+    }
+}
+
+.Juegos img {
+ 
+    width: 30%; /* Mantiene el tamaño relativo */
+}
+
+.Juegos .derecha img {
+    width: auto; /* Ajusta el tamaño según la imagen */
+    width: 100%; /* Evita que sea demasiado grande */
+    @media (max-width: 768px){ 
+        width: 0%;
+}
+}
+ 
+/* Botón grande */
+.Juegos button {
+    font-size: 40px;
+    font-weight: bold;
+    width: 400px;       /* Ancho del botón */
+    height: 100px;      /* Alto del botón */
+    background-image: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* Ajusta la imagen sin deformarla */
+    image-rendering: pixelated; /* Mantiene los bordes nítidos al escalar */
+    color: black;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none; /* Si deseas quitar el borde por defecto */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .Juegos button {
+        width: 50%;    /* Se hace del 100% del contenedor */
+        height: auto;   /* Ajusta la altura */
+        font-size: 24px;  
+        padding: 10px;
+    }
+}
+
+/*==================== GALERÍA ====================*/
+.palabragaleria {
+    text-align: center;
+    margin: 10px;
+    color: white;
+}
+
+.galeriabor {
+    background-color: rgb(173, 173, 173);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.galeria img {
+    width: 15%;
+    margin: 5px;
+    border: 2px solid white;
+}
+
+/* Ajuste de la galería en pantallas pequeñas */
+@media (max-width: 768px) {
+    .galeria img {
+        width: 40%; /* Ajusta el tamaño de las imágenes en móviles */
+        margin: 5px 0;
+    }
+}
+
+/* Ajuste de las imagenes grandes*/
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #imagenes img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Contenido centrado */
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Imagen dentro del overlay */
+    .overlay img {
+        max-width: 50%;
+        max-height: 50%;
+        margin-bottom: 15px;
+    }
+
+    .overlay a {
+        text-decoration: none;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        background-image: url(../img/button.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; /* Ajusta la imagen sin deformarla */
+        image-rendering: pixelated; /* Mantiene los bordes nítidos al escalar */
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .overlay a:hover {
+        transform: scale(1.1);
+    }
+/*==================== FOOTER ====================*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 20px;
+    color: black;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Apila los elementos del footer */
+        align-items: center;
+        text-align: center;
+    }
+}
+
+footer div {
+    margin: 10px;
+    text-align: center;
+}
+
+#Homeico img {
+    width: 50px;
+    border-radius: 50%;
+}
