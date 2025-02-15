@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golfik-Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- Menú de navegación -->
+    <nav id="menu">
+        <div>
+            <img id="golfik" src="img/icono.png" alt="Icono Golfik-Games" style="height: 60px;">
+        </div>
+        <div id="Divli">
+            <ul>
+                <li><a href="index.html#TextoBit"><button>Inicio</button></a></li>
+                <li><a href="index.html#games"><button>Galería</button></a></li>
+                <li><a href="index.html#video"><button>Animaciones</button></a></li>
+                <li><a href="cuestionario.html"><button>Contacto</button></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cuestionario de Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="off">
+            
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required autocomplete="off">
+            
+            <label for="motivo">Motivo del contacto:</label>
+            <textarea id="motivo" name="motivo" rows="4" required autocomplete="off"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div id="Copyright">
+            <p>GolfikGames</p>
+            <p>© 2025</p>
+        </div>
+        <div id="contac">
+            <p>Email: info@Golfik-Games.com</p>
+            <p>Teléfono: +34 XXXXXXXXX</p>
+        </div>
+        <div id="Redes">
+            <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://x.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com/c/golfik"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
