@@ -430,9 +430,9 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgb(20, 0, 21);
     padding: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
@@ -515,7 +515,7 @@ footer div {
     height: 60px;
     cursor: pointer;
     font-size: 16px;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     line-height: 60px;
     border-radius: 5px;
