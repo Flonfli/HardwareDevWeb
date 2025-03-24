@@ -49,6 +49,7 @@ body {
     display: flex;
 }
 
+
 #menu button {
     color: rgb(0, 0, 0);
     background-image: url(../img/button.png);
@@ -520,6 +521,62 @@ footer div {
     border-radius: 5px;
     margin-top: 10px;
 }
+
+/* ======= TABLET (768px - 992px) ======= */
+@media (min-width: 768px) and (max-width: 992px) {
+    #menu {
+        height: 65px;
+        padding: 0 15px;
+        background-image: url(../img/marco2.png);
+    }
+
+    #menu img {
+        margin-left: 10%;
+        width: 100px;
+    }
+
+    #menu ul {
+        justify-content: center;
+    }
+
+    #menu button {
+        margin: 0 10px;
+        height: 35px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+}
+
+/* ======= MÓVIL (<768px) ======= */
+@media (max-width: 767px) {
+    #menu {
+        top: unset;
+        bottom: 0;
+        height: 50px;
+        padding: 0 10px;
+        justify-content: center;
+        background-image: url(../img/marco2.png);
+    }
+
+    #menu img {
+        display: none;
+    }
+
+    #menu ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu button {
+        margin: 0 5px;
+        font-size: 12px;
+        height: 35px;
+        padding: 0 10px;
+    }
+}
+
 
 #contacto button:hover {
    
